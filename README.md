@@ -15,10 +15,12 @@ ssh-keygen -t rsa
 ```
 -- by unsing above commnd generate keys in cmd
 ## after that change the public key and peiavte key path in ec2.tf file
--- everthing is done just run the following commnds to build infra and all
 ## one more main thing you nedd to pass your cloud credantiels in terraform working dircictroy by using aws configure 
 ```sh
 aws configure
+```
+-- everthing is done just run the following commnds to build infra and all
+
 ```sh
 terraform init
 terraform plan
