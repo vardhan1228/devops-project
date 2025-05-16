@@ -1,6 +1,3 @@
-provider "aws" {
-  region = "us-east-1"
-}
 
 resource "aws_key_pair" "example" {
   key_name   = var.key_name # Replace with your desired key name
@@ -19,8 +16,10 @@ resource "aws_instance" "vsv" {
   tags = {
     Name = "my-ec2"
   }
+}
 
- provisioner "remote-exec" {
+resource "null_resource" "null1" {
+  provisioner "remote-exec" {
     inline = [
     "sudo yum update -y",
     "sudo yum install git -y",
@@ -36,14 +35,15 @@ resource "aws_instance" "vsv" {
     "npm run build",
     "sudo cp -r build/* /var/www/html",
     "curl ${aws_instance.vsv.private_ip}"
-    ]
 
+    ]
     connection {
-      type        = "ssh"
-      user        = "ec2-user"
+      host = aws_instance.vsv.public_ip
       private_key = file("~/.ssh/id_rsa")
-      host        = self.public_ip
+      user = "ec2-user"
+      type = "ssh"
     }
   }
+  
 }
 
