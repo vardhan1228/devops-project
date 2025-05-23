@@ -17,5 +17,16 @@ default = ""
 }
 variable "region" {
   description = "region"
-  type = ""
+  type = string
+  default = ""
+}
+variable "bucket_name" {
+  description = "Name of the S3 bucket"
+  type        = string
+  default = ""
+}
+variable "pattoken" {
+  type = string
+  default = ""
+  
 }
