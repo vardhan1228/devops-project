@@ -35,6 +35,19 @@ terraform apply
  4. Tests if app is reachable via port 80
  5. Stops the instance after a set time (for cost saving)
 ```
+
+
+## Devops asignment 2
+-- created s3.tf for s3 bucket creation and bucket readonly access policy
+-- i am supertaed provisioners to superate file called as provioners.tf. ia m writed two null resources one is for previous task and another one is for task two .
+--  In this second provisioner i am cloned the private repo from git hub static files repo and placed that files into s3 bucket  
+-- creted one more file iam.tf. In this file i am creted s3 full a ccees permisiion policy and crated ec2 role 
+-- logs.sh file is for to move specific log files to s3 bucket
+-- logs.service file refers to trigger the shutdow behaviours
+-- change the git pat token  and s3 bucket name in terraform.tfvars 
+--  and also change s3 bucket name in logs.sh
+-- in terraform.tfvars change to your git hub pat token
+-- and priavte repo url on the provisioner block
 ##  if you are doing this assingnmnets facing any errors or stuck anywhwre feel free to reach out me 
           thank you
           srivardhan vallbahaneni
