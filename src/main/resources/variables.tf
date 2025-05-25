@@ -30,3 +30,9 @@ variable "pattoken" {
   default = ""
   
 }
+variable "vpc-cidr" {}
+variable "pub-sub1-cidr" {}
+variable "pub-sub2-cidr" {}
+variable "pub-sub1-az" {}
+variable "pub-sub2-az" {}
+

@@ -1,7 +1,7 @@
 
 # create vpc
 resource "aws_vpc" "vpc" {
-    cidr_block = "10.0.0.0/16"
+    cidr_block = var.vpc-cidr
   tags = {
     Name = "cust-vpc"
   }
@@ -17,8 +17,8 @@ resource "aws_internet_gateway" "ig" {
 # create subnet 1
 resource "aws_subnet" "pub-sub1" {
     vpc_id = aws_vpc.vpc.id
-    cidr_block = "10.0.0.0/24"
-    availability_zone = "us-east-1b"
+    cidr_block = var.pub-sub1-cidr
+    availability_zone = var.pub-sub1-az
     map_public_ip_on_launch = true  # for auto asign public ip for subnet
     tags = {
     Name = "cust-sub1"
@@ -27,8 +27,8 @@ resource "aws_subnet" "pub-sub1" {
 # create subnet 2
 resource "aws_subnet" "pub-sub2" {
   vpc_id = aws_vpc.vpc.id
-  availability_zone = "us-east-1a"
-  cidr_block = "10.0.1.0/24"
+  availability_zone = var.pub-sub2-az
+  cidr_block = var.pub-sub2-cidr
   map_public_ip_on_launch = true  # for auto asign public ip for subnet
   tags = {
     Name = "cust-sub2"
