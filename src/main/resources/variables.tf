@@ -17,5 +17,25 @@ default = ""
 }
 variable "region" {
   description = "region"
-  type = ""
+  type = string
+  default = ""
 }
+variable "bucket_name" {
+  description = "Name of the S3 bucket"
+  type        = string
+  default = ""
+}
+variable "pattoken" {
+  type = string
+  default = ""
+  
+}
+variable "vpc-cidr" {}
+variable "pub-sub1-cidr" {}
+variable "pub-sub2-cidr" {}
+variable "pub-sub1-az" {}
+variable "pub-sub2-az" {}
+variable "volumesize" {
+  
+}
+
