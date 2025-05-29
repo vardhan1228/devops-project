@@ -1,5 +1,5 @@
 # devops-project
-👉 lets clone this repo 
+👉 lets clone this repo  
 👉 switch to cloned repo and terraform configuration files path
 ```sh
 cd src/main/resources
@@ -12,24 +12,18 @@ cd src/main/resources
 ```sh
 ssh-keygen -t rsa
 ```
-- by unsing above commnd generate keys in cmd
+- by unsing above commnd generate keys in cmd or if you have alredy existing keys plese use it 
 ## after that change the public key and peiavte key path in ec2.tf  resource block and provisoner.tf connction block files
 - one more main thing you nedd to pass your cloud credantiels in terraform working dircictroy by using aws configure 
 ## if your keys alredy configured just ignore aews configure
 ```sh
 Install AWS CLI    ## if alredy installed igonre it 
-Create IAM user with required policy
+Create IAM user with required policy of ec2,s3,iam,vpc creation permisions 
 Generate access and secret keys
 Run aws configure to set up credentials
 aws configure
 ```
-- everthing is done just run the following commnds to build infra and all
 
-```sh
-terraform init
-terraform plan
-terraform apply
-```
 ## conclusion 
 -- by unsing above configuration files i am done below tasks 
 ```sh
@@ -44,7 +38,7 @@ terraform apply
 ## Devops asignment 2
 - created s3.tf for s3 bucket creation and bucket readonly access policy
 # 
-- i am supertaed provisioners to superate file called as provioners.tf. iam writed two null resources one is for previous task and another one is for task two .
+- i am superated provisioners to superate file called as provioners.tf. iam writed two null resources one is for previous task and another one is for task two .
 - In this second provisioner i am cloned the private repo from git hub static files repo and placed that files into s3 bucket
 - if your end change the priavte repo cloning url here  
 - creted one more file iam.tf. In this file i am creted s3 full a accees permisiion policy and crated ec2 role 
@@ -55,6 +49,14 @@ terraform apply
 - in terraform.tfvars change to your git hub pat token
 - and priavte repo url on the provisioner block
 ### change the terraform.tfvars file values according two your requirement  but take the os is amazon linux only because we have configured entire shell script to amazon linux only
+
+- everthing is done just run the following commnds to build infra and all
+
+```sh
+terraform init
+terraform plan
+terraform apply
+```
 -  if you are doing this assingnmnets facing any errors or stuck anywhwre feel free to reach out me 
           thank you
           srivardhan vallbahaneni
