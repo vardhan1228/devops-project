@@ -8,18 +8,22 @@ git clone https://github.com/vardhan1228/devops-project.git
 cd src/main/resources
 ```
 ##  these all files consist of ec2 creation and cloneing the public git hub repo and deploying the appliaction through privisioners
--- if you want yo change the instance tpye chage it on ## variable.tf ## file 
+## change the values in ## terraform.tfvars ## file 
 ## one more main procress is we need to generate the keys in local for connection ec2 by unsing provisioners 
-## if you have alredy priavte key in your local just passs the priavte key path in provisoner connection block
+## if you have alredy priavte key in your local just passs the priavte key path in provisoner connection block and commnet the key pair resource block 
 -- change the key name according your environment
 ```sh
 ssh-keygen -t rsa
 ```
 -- by unsing above commnd generate keys in cmd
-## after that change the public key and peiavte key path in ec2.tf file
+## after that change the public key and peiavte key path in ec2.tf  resource block and provisoner.tf connction block files
 ## one more main thing you nedd to pass your cloud credantiels in terraform working dircictroy by using aws configure 
 ## if your keys alredy configured just ignore aews configure
 ```sh
+Install AWS CLI    ## if alredy installed igonre it 
+Create IAM user with required policy
+Generate access and secret keys
+Run aws configure to set up credentials
 aws configure
 ```
 -- everthing is done just run the following commnds to build infra and all

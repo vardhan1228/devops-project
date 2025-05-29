@@ -13,7 +13,9 @@ resource "aws_instance" "vsv" {
   subnet_id = aws_subnet.pub-sub1.id
   vpc_security_group_ids = [ aws_security_group.cust-sg.id ]
   iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
-  
+  root_block_device {
+    volume_size = var.volumesize
+  }
 
   tags = {
     Name = "my-ec2"

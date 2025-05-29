@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "tech" {
     bucket = var.bucket_name
     # -${replace(replace(replace(replace(timestamp(), "-", ""), ":", ""), "T", ""), "Z", "")}"
-    # force_destroy = true
+    force_destroy = true
 
 
 
