@@ -45,17 +45,17 @@ terraform apply
 
 
 ## Devops asignment 2
--- created s3.tf for s3 bucket creation and bucket readonly access policy
--- i am supertaed provisioners to superate file called as provioners.tf. iam writed two null resources one is for previous task and another one is for task two .
---  In this second provisioner i am cloned the private repo from git hub static files repo and placed that files into s3 bucket
+# created s3.tf for s3 bucket creation and bucket readonly access policy
+# i am supertaed provisioners to superate file called as provioners.tf. iam writed two null resources one is for previous task and another one is for task two .
+#  In this second provisioner i am cloned the private repo from git hub static files repo and placed that files into s3 bucket
 ## if your end change the priavte repo cloning url here  
--- creted one more file iam.tf. In this file i am creted s3 full a accees permisiion policy and crated ec2 role 
--- logs.sh file is for to move specific log files to s3 bucket
--- logs.service file refers to trigger the shutdown behaviours
--- change the git pat token  and s3 bucket name in terraform.tfvars 
---  and also change s3 bucket name in logs.sh
--- in terraform.tfvars change to your git hub pat token
--- and priavte repo url on the provisioner block
+# creted one more file iam.tf. In this file i am creted s3 full a accees permisiion policy and crated ec2 role 
+# logs.sh file is for to move specific log files to s3 bucket
+# logs.service file refers to trigger the shutdown behaviours
+# change the git pat token  and s3 bucket name in terraform.tfvars 
+#  and also change s3 bucket name in logs.sh
+# in terraform.tfvars change to your git hub pat token
+# and priavte repo url on the provisioner block
 ### change the terraform.tfvars file values according two your requirement  but take the os is amazon linux only because we have configured entire shell script to amazon linux only
 ##  if you are doing this assingnmnets facing any errors or stuck anywhwre feel free to reach out me 
           thank you
