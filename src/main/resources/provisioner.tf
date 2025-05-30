@@ -31,6 +31,9 @@ resource "null_resource" "null1" {
 
 ####################priavte-repclone and copy files to s3 ######################
 
+locals {
+  pattoken = var.pattoken
+}
 
 resource "null_resource" "privaterepo-clone" {
   depends_on = [aws_instance.vsv,null_resource.null1]
