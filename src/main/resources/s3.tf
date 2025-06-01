@@ -3,10 +3,6 @@ resource "aws_s3_bucket" "tech" {
     # -${replace(replace(replace(replace(timestamp(), "-", ""), ":", ""), "T", ""), "Z", "")}"
     # force_destroy = true
 
-
-
-
-
   lifecycle {
     prevent_destroy = false
   }

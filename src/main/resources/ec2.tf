@@ -1,7 +1,7 @@
 
 resource "aws_key_pair" "example" {
   key_name   = var.key_name # Replace with your desired key name
-  public_key = file("~/.ssh/id_rsa.pub") 
+  public_key = file(var.public-key-path) 
 
 
 }
@@ -16,7 +16,7 @@ resource "aws_instance" "vsv" {
   root_block_device {
     volume_size = var.volumesize
   }
-
+depends_on = [ aws_s3_bucket.tech ]
   tags = {
     Name = "my-ec2"
   }

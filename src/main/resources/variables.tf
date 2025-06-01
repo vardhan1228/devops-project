@@ -35,7 +35,11 @@ variable "pub-sub1-cidr" {}
 variable "pub-sub2-cidr" {}
 variable "pub-sub1-az" {}
 variable "pub-sub2-az" {}
-variable "volumesize" {
-  
-}
-
+variable "volumesize" {  }
+variable "git-username-public" { }
+variable "git-repo-public" {  }
+variable "git-username-private" { }
+variable "git-repo-priavte" {  }
+variable "priavte-key-path" { }
+variable "public-key-path" { }
+variable "ec2-username" { }
